@@ -1,0 +1,531 @@
+
+	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	
+	body {
+		margin:0;
+		background-color: #333333;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+		color:white;
+	}
+	.top-navmenu{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: 10000;
+	}
+	#nav, #nav ul {
+		min-width:1600px;	
+		list-style: none outside none;
+		margin: 0;
+		padding: 0;
+	}
+	#nav {
+		background-color: #000000;
+		/*
+		background: -moz-linear-gradient(top, rgba(78,105,162,1) 0%, rgba(59,88,152,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(78,105,162,1)), color-stop(100%, rgba(59,88,152,1)));
+		background: -webkit-linear-gradient(top, rgba(78,105,162,1) 0%, rgba(59,88,152,1) 100%);
+		background: -o-linear-gradient(top, rgba(78,105,162,1) 0%, rgba(59,88,152,1) 100%);
+		background: -ms-linear-gradient(top, rgba(78,105,162,1) 0%, rgba(59,88,152,1) 100%);
+		background: linear-gradient(to bottom, rgba(78,105,162,1) 0%, rgba(59,88,152,1) 100%);
+		border-bottom: 1px solid #3A4B7B;*/
+		height: 22px;
+		padding: 10px 0 10px 5px;
+		position: relative;
+	}
+	#nav > li {
+		float: left;
+		height: 22px;
+		padding-right: 6px;
+		position: relative;
+		text-align: left;
+	}
+	#nav > li > a {
+		border: 1px solid transparent;
+		color: #FFFFFF;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		height: 27px;
+		line-height: 27px;
+		margin: -3px 0 0 -1px;
+		padding: 0 11px 0 11px;
+		text-decoration: none;
+		text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+	}
+	#nav > li:hover > a, #nav > a:hover {
+		color: #00FFFF;
+		/*
+		background-color: #425691;
+		border-radius: 2px 2px 2px 2px;
+		color: #FFFFFF;
+		margin-right: -8px;
+		padding: 0 9px 0 11px;
+		position: relative;
+		z-index: 1;*/
+	}
+	#nav > li.subs:hover > a {
+		/*
+		background-color: #FFFFFF;
+		border: 1px solid rgba(100, 100, 100, 0.4);
+		border-bottom-width: 0;
+		border-radius: 2px 2px 0 0;
+		color: #000000;
+		text-shadow: 0 0 transparent;
+		z-index: 2;*/
+	}
+	
+	/*復權*/
+	.unban-account-li{
+		margin-left:250px;
+	}
+	#unban-member-id{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+		background:#cce6ff;
+	}
+	.unban-submit{
+		color:#f2f2f2;
+		text-decoration:none;
+		padding:2px 10px;
+		background:#3399ff;
+		border-radius: 4px;
+	}
+	.unban-submit:hover{
+		background:#0073e6;
+	}
+	.unban_msg{
+		color:#99bbff;
+	}
+	
+	/*停權*/
+	#ban-member-id{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+		background:#ffcccc;
+	}
+	.ban-submit{
+		color:#f2f2f2;
+		text-decoration:none;
+		padding:2px 10px;
+		background:#ff0000;
+		border-radius: 4px;
+	}
+	.ban-submit:hover{
+		background:#b30000;
+	}
+	.ban_msg{
+		color:#ff3333;
+	}
+	
+	.page_title{
+		margin-top:50px;
+		font-size:36px;
+	}
+	/*檢舉列表*/
+	.report_table {
+		display:table;
+		font-size:16px;
+	}
+	.report_tr {
+		display:table-row;
+	}
+	.report_title{
+		font-size:24px;
+	}
+	.report_td {
+		min-width:120px;
+		height:60px;
+		padding:2px;
+		display:table-cell;
+		vertical-align:middle;
+		border:solid 1px white;
+	}
+	.report-judge{
+		text-decoration:none;
+		color:#f2f2f2;
+		border:solid 1px white;
+	}
+	.report-notguilty{
+		position:relative;
+		top:8px;
+		text-decoration:none;
+		color:#f2f2f2;
+		border:0;
+	}
+	
+	.report-judge:hover {
+		text-decoration: underline;
+		color:#00cccc;;
+	}
+
+	.report_td a{
+		text-decoration:none;
+		color:#f2f2f2;
+	}
+	.report_td a:hover{
+		text-decoration:underline;
+	}
+	/*停權名單*/
+	.ban_table {
+		display:table;
+		font-size:16px;
+	}
+	.ban_tr {
+		display:table-row;
+	}
+	.ban_title{
+		font-size:24px;
+	}
+	.ban_td {
+		min-width:120px;
+		height:60px;
+		padding:2px;
+		display:table-cell;
+		vertical-align:middle;
+		border:solid 1px white;
+	}
+	.ban_td a{
+		text-decoration:none;
+		color:#f2f2f2;
+	}
+	.ban_td a:hover{
+		text-decoration:underline;
+	}
+	
+	
+	/*popup發文*/
+	.newthread_popup {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 10000; /* Sit on top */
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%; /* Full width */
+		max-height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 100px;
+	}
+
+	.newthread-upload {
+		/*垂直置中語法
+		position: fixed;
+		top: 50%;
+		left: 50%;*/
+		 /*transform: translate(-50%, -50%); *//*
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		*/
+		display: block;
+		padding: 40px;
+		width: 300px;
+		height:400px;
+		background-color: #404040;
+		margin: 0 auto 10px;
+		border-radius: 2px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	/* The Close Button (x) */
+	.newthread_popup-close{
+		position: relative;
+		top: -40px;
+		left: 30px;
+		float:right;
+		color: #e6e6e6;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	.newthread_popup-close:hover,
+	.newthread_popup-close:focus {
+		cursor: pointer;
+	}
+	.newthread-title{
+		display:none;
+	}
+	.drag-drop-tip{
+		clear:both;
+		border: 5px solid #808080;
+		width:290px;
+		height:120px;
+		font-size: 24px; 
+		color:white;
+		line-height:120px;
+	}
+	
+	.thread-upload-file {
+		position: relative;
+		display:inline-block;
+		background: #D0EEFF;
+		border: 1px solid #99D3F5;
+		border-radius: 4px;
+		padding: 5px 20px;
+		overflow: hidden;
+		font-size: 24px; 
+		font-weight: 400;
+		color: #1E88C7;
+		text-decoration: none;
+		margin-top:50px;
+	}
+	.thread-upload-file input {
+		font-size: 100px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		opacity: 0;
+	}
+	
+	.newthread-upload input[type=text]{
+		height: 40px;
+		font-size: 24px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+		width:100%;
+		height:50px;
+		-webkit-appearance: none;
+		background: #fff;
+		border: 1px solid #d9d9d9;
+		border-top: 1px solid #c0c0c0;
+		border-radius: 2px;
+		padding: 0 8px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		text-align: center;
+		margin-top:50px;
+	}
+
+	.newthread-upload input[type=text]:hover{
+		border: 1px solid #b9b9b9;
+		border-top: 1px solid #a0a0a0;
+		-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+		-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	}
+	.uploadimg_url-error{
+		visibility:hidden;
+		color:#ffad33;
+		margin-top:5px;
+	}
+	.newthread-post {
+		/*垂直置中語法
+		position: fixed;
+		top: 50%;
+		left: 50%;*/
+		 /*transform: translate(-50%, -50%); *//*
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		*/
+		display: none;
+		padding: 30px;
+		width:940px;
+		max-height:90%;
+		background-color: #404040;
+		margin: 0 auto;
+		border-radius: 2px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		overflow: auto;
+		text-align : center;
+	}
+	
+	/* The Close Button (x) */
+	.newthread_post-close{
+		position: relative;
+		top: -30px;
+		left: 20px;
+		float:right;
+		color: #e6e6e6;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	.newthread_post-close:hover,
+	.newthread_post-close:focus {
+		cursor: pointer;
+	}
+
+	.div-thread_subject{
+		height:120px;
+		text-align: left;
+	}
+	
+	.thread-subject{
+		overflow:hidden;
+		resize: none;
+		width:535px;
+		height:80px;
+		background: #fff;
+		border-radius: 2px;
+		font-size: 18px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+	}
+	.thread_subject_msg{
+		visibility:hidden;
+		color:#ffad33;
+	}
+	.makememe-div{
+		text-align: center;
+	}
+	.makememe-div-right{
+		position: relative;
+		/*border: 1px solid #99D3F5;*/
+		float:right;
+		width:350px;
+		height:270px;
+		text-align: left;
+	}
+	.meme-inputtext{
+		resize: none;
+		width:293px;
+		height:70px;
+		background: #fff;
+		font-size: 20px; 
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 400;
+	}
+	.meme_fontsize{
+		display:inline-block;
+		background: #D0EEFF;
+		border: 1px solid #99D3F5;
+		border-radius: 4px;
+		padding: 0px 16px;
+		font-size: 22px; 
+		font-weight: 800;
+		color: #1E88C7;
+		text-decoration: none;
+		text-align:center;
+	}
+	.meme_fontsize-disabled{
+		background: #cccccc;
+		border-color: #999999;
+		color: gray;
+	}
+	.topline-div{
+		position: relative;
+	}
+	.bottomline-div{
+		position: relative;
+		top:30px;
+	}
+	#topline_increase{
+		position: absolute;
+		top:0;
+		right:0px;
+	}
+	#topline_decrease{
+		position: absolute;
+		top:41px;
+		right:0px;
+		padding: 0px 15px;
+	}
+	#bottomline_increase{
+		position: absolute;
+		top:0px;
+		right:0px;
+	}
+	#bottomline_decrease{
+		position: absolute;
+		top:41px;
+		right:0px;
+		padding: 0px 15px;
+	}
+	.meme-canvas{
+		border: 1px solid #333333;
+		float:left;
+	}
+	.preview-gif{
+		border: 1px solid #333333;
+		display: none; /* Hidden by default */
+		float:left;
+		width:540px;
+	}
+
+	.post-backtoup{
+		position: absolute;
+		/*bottom:0;*/
+		bottom:0;
+		left:0;
+		display:inline-block;
+		background: #D0EEFF;
+		border: 1px solid #99D3F5;
+		border-radius: 4px;
+		padding: 0px 8px;
+		font-size: 22px; 
+		font-weight: 400;
+		color: #1E88C7;
+		text-decoration: none;
+	}
+	.newthread-send{
+		position: absolute;
+		right:51px;
+		bottom:0;
+		/*bottom:0;*/
+		/*right:40px;*/
+		display:inline-block;
+		background: #D0EEFF;
+		border: 1px solid #99D3F5;
+		border-radius: 4px;
+		padding: 0px 19px;
+		font-size: 22px; 
+		font-weight: 400;
+		color: #1E88C7;
+		text-decoration: none;
+	}
+	
+	.is-dragover {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 10; /* Sit on top */
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%; /* Full width */
+		max-height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+		
+		text-align : center;
+
+	}
+
+	.dragover-text{
+		pointer-events: none; /*當drag到這個元素的時候不會有動作，才不會drag到此元素讓is-dragover消失又出現，閃爍*/
+		color: white;
+		min-width:600px;
+		font-size: 120px;
+		font-weight: bold;
+		position: fixed;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		 transform: translate(-50%, -50%); 
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

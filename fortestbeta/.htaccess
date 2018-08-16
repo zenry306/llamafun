@@ -1,0 +1,41 @@
+#Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.llamafun.com/$1 [R,L]
+
+#ErrorDocument 404 /404.html
+#ErrorDocument 403 /403.html
+#ErrorDocument 500 /403.html
+
+#Redirect /board/1.html /board/rewriting.php
+#Redirect /board/boradtest.php /board/rewriting.php
+#Options +FollowSymLinks -MultiViews -Indexes
+
+#Options +FollowSymLinks -MultiViews
+
+#RewriteEngine On
+#RewriteBase /llamafun/
+#RewriteRule ^/?fun/(.*)$ /llamafun/thread-show.php?thread_id=$1 [QSD,L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [QSA,L]
+
+
+#RewriteCond %{QUERY_STRING} ^product=([^/]+)$
+#RewriteRule ^products\.php$ %1.php [L]
+
+#RewriteCond %{QUERY_STRING} ^/board/fun/(.*)$
+#RewriteRule ^?fun\(.*)$ /board/thread-show.php?thread_id=$1 [QSD,L]
+
+#RewriteCond %{QUERY_STRING} ^product=([^/]+)$
+#RewriteRule ^products\.php$ %1.php [L]
+
+
+
+#RewriteEngine on
+#RewriteRule ^([0-9A-Za-z]+).html$ boradtest.php?name=$1
+#RewriteRule /rewriting.php /boradtest.php
+#RewriteRule ^/board/boradtest/([0-9]+)$ /board/boradtest.php?id=$1
+#RewriteRule ^/?Some-text-goes-here/([0-9]+)$ /picture.php?id=$1
+#^forum/([0-9]+)$ /forum/list.php?$1 [L] 
